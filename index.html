@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Professional Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        header {
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            background: var(--bg-light);
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: #e5e7eb;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid var(--white);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .subtitle { color: var(--primary); font-weight: 600; font-size: 1.2rem; margin-bottom: 1.5rem; }
+
+        /* Sections */
+        section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--primary);
+            padding-left: 1rem;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-tag {
+            background: var(--bg-light);
+            padding: 0.75rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            border: 1px solid #eee;
+        }
+
+        /* Experience & Projects */
+        .card {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .card:last-child { border: none; }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title { font-weight: 700; font-size: 1.1rem; }
+        .card-meta { color: var(--text-light); font-size: 0.9rem; }
+
+        /* Contact */
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            background: var(--primary);
+            color: white;
+            transition: opacity 0.3s;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn:hover { opacity: 0.8; }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            border-top: 1px solid #eee;
+        }
+
+        @media (max-width: 600px) {
+            .nav-links { display: none; }
+            .card-header { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div style="font-weight: 700; color: var(--primary);">PORTFOLIO</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="profile-img">
+            <span style="color: #9ca3af;">Photo</span>
+        </div>
+        <h1>[Your Name]</h1>
+        <p class="subtitle">[Professional Title / Headline]</p>
+        <p style="max-width: 600px; margin: 0 auto; color: var(--text-light);">
+            [Brief hook or mission statement from your resume summary.]
+        </p>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>[Paste your detailed professional summary here. Focus on your career goals and the value you bring to a team.]</p>
+    </section>
+
+    <section id="skills" style="background-color: var(--bg-light); border-radius: 20px;">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-tag">JavaScript</div>
+            <div class="skill-tag">Project Management</div>
+            <div class="skill-tag">Data Analysis</div>
+            <div class="skill-tag">Python</div>
+            <div class="skill-tag">UX Design</div>
+            <div class="skill-tag">Agile</div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">[Job Title] | [Company Name]</div>
+                <div class="card-meta">[Dates of Employment]</div>
+            </div>
+            <ul>
+                <li>[Key achievement or responsibility]</li>
+                <li>[Key achievement or responsibility]</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">[Previous Job Title] | [Company Name]</div>
+                <div class="card-meta">[Dates of Employment]</div>
+            </div>
+            <ul>
+                <li>[Key achievement or responsibility]</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Selected Projects</h2>
+        
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">[Project Name]</div>
+                <div class="card-meta"><a href="#" style="color: var(--primary);">View Live →</a></div>
+            </div>
+            <p>[Describe the problem, your solution, and the technologies used.]</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 style="text-align: center; border: none;">Get In Touch</h2>
+        <div class="contact-links">
+            <a href="mailto:your.email@example.com" class="btn">Email Me</a>
+            <a href="https://linkedin.com/in/yourusername" class="btn btn-outline" target="_blank">LinkedIn</a>
+            <a href="https://github.com/yourusername" class="btn btn-outline" target="_blank">GitHub</a>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 [Your Name]. Built with simplicity in mind.
+    </footer>
+
+</body>
+</html>
